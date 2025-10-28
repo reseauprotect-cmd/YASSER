@@ -104,7 +104,7 @@ export default function LoanCalculatorPage({ onBack, userInfo }: LoanCalculatorP
       `Montant du crédit: ${formatCurrency(results.loanAmount)}, ` +
       `Mensualité: ${formatCurrency(results.monthlyPayment)}.`
     );
-    window.open(`https://wa.me/212660762762?text=${message}`, '_blank');
+    window.open(`https://wa.me/YOUR_NUMBER?text=${message}`, '_blank');
   };
 
   return (
@@ -199,36 +199,38 @@ export default function LoanCalculatorPage({ onBack, userInfo }: LoanCalculatorP
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2 font-serif">
-                      Banque
-                    </label>
-                    <select
-                      value={selectedBank}
-                      onChange={(e) => setSelectedBank(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-300 focus:border-allali-red focus:ring-2 focus:ring-allali-red/20 outline-none transition-all duration-300"
-                    >
-                      <option value="">Sélectionner</option>
-                      {banks.map((bank) => (
-                        <option key={bank.name} value={bank.name}>
-                          {bank.name} ({bank.rate}%)
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white text-sm font-semibold mb-2 font-serif">
+                        Banque
+                      </label>
+                      <select
+                        value={selectedBank}
+                        onChange={(e) => setSelectedBank(e.target.value)}
+                        className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-300 focus:border-allali-red focus:ring-2 focus:ring-allali-red/20 outline-none transition-all duration-300"
+                      >
+                        <option value="">Sélectionner</option>
+                        {banks.map((bank) => (
+                          <option key={bank.name} value={bank.name}>
+                            {bank.name} ({bank.rate}%)
+                          </option>
+                        ))}
+                      </select>
+                    </div>
 
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2 font-serif">
-                      TVA (%)
-                    </label>
-                    <input
-                      type="number"
-                      step="0.1"
-                      value={customTVA}
-                      onChange={(e) => setCustomTVA(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-300 focus:border-allali-red focus:ring-2 focus:ring-allali-red/20 outline-none transition-all duration-300"
-                      placeholder="0"
-                    />
+                    <div>
+                      <label className="block text-white text-sm font-semibold mb-2 font-serif">
+                        TVA (%)
+                      </label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        value={customTVA}
+                        onChange={(e) => setCustomTVA(e.target.value)}
+                        className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-300 focus:border-allali-red focus:ring-2 focus:ring-allali-red/20 outline-none transition-all duration-300"
+                        placeholder="0"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

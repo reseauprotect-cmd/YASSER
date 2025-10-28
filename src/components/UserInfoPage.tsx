@@ -19,11 +19,14 @@ interface UserInfoPageProps {
 }
 
 const projects = [
-  'Life City Zenata',
-  'Natura Living',
-  'Rosa Parc',
-  'MOcean',
-  'Joyau du Parc'
+  'Villa Moderne',
+  'Appartement Standing',
+  'Résidence Fermée',
+  'Duplex Luxe',
+  'Terrain Viabilisé',
+  'Penthouse',
+  'Studio',
+  'Riad Traditionnel'
 ];
 
 export default function UserInfoPage({ onContinue, initialData }: UserInfoPageProps) {
