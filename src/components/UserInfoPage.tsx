@@ -65,7 +65,7 @@ export default function UserInfoPage({ onContinue, initialData }: UserInfoPagePr
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            backgroundImage: 'url(https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1920)',
           }}
         >
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
