@@ -9,7 +9,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center">
           <img
-            src="/image copy copy copy copy.png"
+            src="/image copy copy copy copy copy.png"
             alt="Allali"
             className="h-14 w-auto"
           />
