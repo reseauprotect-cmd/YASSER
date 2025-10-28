@@ -7,9 +7,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-t-4 border-red-600 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex items-center space-x-2">
-          <span className="text-3xl font-bold text-black">allali</span>
-          <span className="inline-block w-2 h-2 bg-red-600 rounded-sm -translate-y-2"></span>
+        <div className="flex items-center">
+          <img
+            src="/image copy.png"
+            alt="Allali"
+            className="h-10 w-auto"
+          />
         </div>
 
         <nav className="hidden md:flex space-x-10 text-lg font-medium text-gray-800">
