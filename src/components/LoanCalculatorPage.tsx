@@ -16,14 +16,13 @@ interface LoanCalculatorPageProps {
 interface Bank {
   name: string;
   rate: number;
-  tva: number;
 }
 
 const banks: Bank[] = [
-  { name: 'Attijariwafa Bank', rate: 4.20, tva: 10 },
-  { name: 'CIH Bank', rate: 4.25, tva: 12 },
-  { name: 'Banque Populaire (BCP)', rate: 4.30, tva: 11 },
-  { name: 'Bank of Africa (BOA)', rate: 4.35, tva: 10.5 }
+  { name: 'Attijariwafa Bank', rate: 4.20 },
+  { name: 'CIH Bank', rate: 4.25 },
+  { name: 'Banque Populaire (BCP)', rate: 4.30 },
+  { name: 'Bank of Africa (BOA)', rate: 4.35 }
 ];
 
 export default function LoanCalculatorPage({ onBack, userInfo }: LoanCalculatorPageProps) {
@@ -212,7 +211,7 @@ export default function LoanCalculatorPage({ onBack, userInfo }: LoanCalculatorP
                           setSelectedBank(bankName);
                           const bank = banks.find(b => b.name === bankName);
                           if (bank) {
-                            setCustomTVA(bank.tva.toString());
+                            setCustomTVA(bank.rate.toString());
                           }
                         }}
                         className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-300 focus:border-allali-red focus:ring-2 focus:ring-allali-red/20 outline-none transition-all duration-300"
